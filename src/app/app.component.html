@@ -1,0 +1,25 @@
+<div id = "content" class = "col-lg-10 col-lg-offset-2">
+
+  <header id = "header" class = " col-lg-12"[style.background]="header_color">
+    <h1>
+      {{ title }}
+    </h1>
+  </header> 
+
+  <nav id="nav" class ="col-ms-12">
+    <ul>
+      <li><a [routerLink]="['/homePage']" [routerLinkActive] = " ['activado']">Pagina Principal</a></li>
+      <li><a [routerLink]="['/customer']" [routerLinkActive] = " ['activado']">Crear Solicitud</a></li>
+      <li><a [routerLink]="['/edit']" [routerLinkActive] = " ['activado']">Responder Solicitud</a></li>
+      <li><a [routerLink]="['/attendant']" [routerLinkActive] = " ['activado']">Consultar Solicitudes</a></li>
+    </ul>
+  </nav> 
+
+  <section id = "main" class = " col-lg-12" >
+    <!--Componente Actual-->
+    <router-outlet></router-outlet>
+  </section>
+
+  
+</div>
+

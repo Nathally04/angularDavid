@@ -1,0 +1,12 @@
+<h3>{{title}}</h3>
+<hr/>
+
+<form #formEdit= "ngForm" class="col-lg-6" id= "formEdit">
+    <label>Respuesta</label>
+    <input type= "text" #Respuesta="ngModel" name= "Respuesta" 
+    [(ngModel)]= "answer.description" class="form-control" required>
+    <span *ngIf = "!description.valid && description.touched" class="label label-success">
+    Debe ingresar una respuesta</span>
+    <br>
+    <input type="submit" value="Enviar" class="btn btn-success">   
+</form>
